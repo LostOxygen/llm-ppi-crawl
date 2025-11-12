@@ -160,7 +160,7 @@ async def main(
         response = llm.invoke(messages)
 
         if response is None:
-            print(f"{TColors.FAIL}LLM failed processing the following URL: {page.url}")
+            print(f"{TColors.FAIL}LLM failed processing following URL: {page.url}{TColors.ENDC}")
             continue
 
         response.url = page.url
