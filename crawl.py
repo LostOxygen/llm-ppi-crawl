@@ -185,7 +185,7 @@ async def main(
 
         # log the extraction result
         log_extraction(
-            extraction=extraction_list,
+            extraction_list=extraction_list,
             output_name=f"{url}_extractions.json",
             log_path=LOGGING_PATH,
         )
