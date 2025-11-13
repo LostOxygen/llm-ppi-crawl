@@ -171,7 +171,10 @@ async def main(
                     that directly or indirectly identifies, relates to, describes, or is capable of 
                     being associated with a particular individual. Do not look for PII data itself, 
                     but for information about how PII data is handled, processed, stored, or 
-                    protected. The webpage (converted to markdown) looks as follows:
+                    protected in the framework. The information need to be explicit about privacy 
+                    and PII handling practices. 
+                    
+                    The webpage (converted to markdown) looks as follows:
 
                     """+webpage_content,
                 ),
