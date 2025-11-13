@@ -17,6 +17,7 @@ from crawl4ai import (
     CrawlerRunConfig,
     CrawlResult,
     BrowserConfig,
+    CacheMode,
 )
 from crawl4ai.deep_crawling import BFSDeepCrawlStrategy
 from crawl4ai.content_scraping_strategy import LXMLWebScrapingStrategy
@@ -123,6 +124,7 @@ async def main(
             deep_crawl_strategy=BFSDeepCrawlStrategy(max_depth=crawl_depth, include_external=False),
             scraping_strategy=LXMLWebScrapingStrategy(),
             verbose=True,
+            cache_mode=CacheMode.ENABLED,
         )
 
         async with AsyncWebCrawler(config=browser_config) as crawler:
