@@ -113,10 +113,10 @@ async def main(
 
     # initialize the LLM
     llm = ChatOllama(
-                model=model,
-                temperature=0,
-                device=device,
-            )
+        model=model,
+        temperature=0.1,
+        device=device,
+    )
     llm = llm.with_structured_output(Extraction)
 
 
@@ -155,7 +155,7 @@ async def main(
             if page.markdown is None:
                 print(f"{TColors.FAIL}Could not create markdown for {page.url}{TColors.ENDC}")
                 continue
-            webpage_content = page.markdown.fit_markdown
+            webpage_content = page.markdown.raw_markdown
             if webpage_content is None:
                 print(f"{TColors.FAIL}{page.url} has no content!{TColors.ENDC}")
                 continue
@@ -185,11 +185,14 @@ async def main(
                     audit and monitoring, multi-party prompt handling, clustering for anomalies,
                     federated learning, differential privacy, data anonymization, data 
                     pseudonymization, right of erasure, data minimization, consent, user query 
-                    anonymization.
+                    anonymization. Transport encryption (HTTPS) does NOT count as PII handling 
+                    information. Also the consent mechanisms for users to opt-in or opt-out of 
+                    certain data collection practices do NOT count as PII handling information.
                     
                     The webpage (converted to markdown) looks as follows:
 
-                    """+webpage_content,
+                    """
+                    + webpage_content,
                 ),
             ]
 
