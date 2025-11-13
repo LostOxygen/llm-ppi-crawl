@@ -149,7 +149,7 @@ async def main(
             )
             llm = llm.with_structured_output(Extraction)
 
-            webpage_content = page.markdown.raw_markdown
+            webpage_content = page.markdown.fit_markdown
             if webpage_content is None:
                 print(f"{TColors.FAIL}{page.url} has no content!{TColors.ENDC}")
                 continue
