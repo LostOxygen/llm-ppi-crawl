@@ -172,7 +172,14 @@ async def main(
                     being associated with a particular individual. Do not look for PII data itself, 
                     but for information about how PII data is handled, processed, stored, or 
                     protected in the framework. The information need to be explicit about privacy 
-                    and PII handling practices. 
+                    and PII handling practices. I will give you a list of mechanisms and keywords 
+                    that describe PII handling practices to help you with your task. Here are some
+                    examples: RAG encryption, transport encryption, access control, zero-trust, 
+                    session isolation, input data validation, sanitization, ouput data validation, 
+                    audit and monitoring, multi-party prompt handling, clustering for anomalies,
+                    federated learning, differential privacy, data anonymization, data 
+                    pseudonymization, right of erasure, data minimization, consent, user query 
+                    anonymization.
                     
                     The webpage (converted to markdown) looks as follows:
 
